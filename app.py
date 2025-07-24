@@ -94,8 +94,8 @@ async def auto_watermark(client: Client, message: Message):
         # Only process if bot is admin in the channel
         chat_id = message.chat.id
         bot_member = await client.get_chat_member(chat_id, "me")
-        if not bot_member.can_edit_messages:
-            return
+       # if not bot_member.can_edit_messages:
+           # return
         
         # Download the image
         temp_path = await message.download()
